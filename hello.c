@@ -5,29 +5,20 @@
 //  Created by Rustamas on 14/02/2018.
 //  Copyright © 2018 Rustamas. All rights reserved.
 //
+#include <string>
+#include <fstream>
+#include <iostream>
 
-#include <stdio.h>
 int main()
 {
-    FILE *f = fopen("doska.txt","rt");
-    char T[10][10];
-    int i = 0, j = 0;
-    while(!feof(f))
+    std::ifstream inf("doska.txt");
+    std::string str;
+    while (inf.eof() == false)
     {
-        fscanf(f, "%c", &T[i++][j]);
-        if(i==9)
-        {
-            i = 0; j++;
-        }
+        std::getline(inf, str);
+        std::cout << str;
+        std::getchar();
     }
-    for(i=0; i<9; i++)
-    {
-        for(j=0; j<9; j++)
-        {
-            printf("%c",T[i][j]);
-        }
-        printf("/n");
-    }
+
     return 0;
 }
-
