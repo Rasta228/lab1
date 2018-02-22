@@ -1,24 +1,14 @@
-//
-//  main.c
-//  lab 1
-//
-//  Created by Rustamas on 14/02/2018.
-//  Copyright © 2018 Rustamas. All rights reserved.
-//
-#include <string>
-#include <fstream>
-#include <iostream>
-
+#include <stdio.h>
 int main()
 {
-    std::ifstream inf("doska.txt");
-    std::string str;
-    while (inf.eof() == false)
-    {
-        std::getline(inf, str);
-        std::cout << str;
-        std::getchar();
-    }
-
-    return 0;
+   printf(" 8 r n b q k b n r
+   7 p p p p p p p p
+   6
+   5
+   4
+   3
+   2 P P P P P P P P
+   1 R N B Q K B N R
+     a b c d e f g h ");
+   return 0;
 }
